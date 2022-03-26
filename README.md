@@ -3,6 +3,15 @@ This is a mix of difflibs HTML visualizer and diffchecker.com's.\
 Tested on Python 3.7 and 3.10.\
 It's just a modification of difflib.
 
+## Prerequisites
+```
+Windows:
+py -3 -m pip install ftfy
+
+Linux:
+python3 -m pip install ftfy
+```
+
 ## My Usage:
 
 ```py
@@ -23,7 +32,7 @@ diff_html = mdifflib.HtmlDiff().make_file(
 diff_html = ftfy.fix_encoding(diff_html)  # Fixes encoding
 
 with open("output.html", "w", encoding="utf-8") as f:
-    f.write()
+    f.write(diff_html)
 
 ```
 
